@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>CRITICAL SYSTEM FAILURE</title>
+<hta:application 
+    id="oHTA"
+    applicationname="FakeVirus"
+    border="none"
+    caption="no"
+    showintaskbar="no"
+    singleinstance="yes"
+    sysmenu="no"
+    windowstate="maximize"
+>
+
+<script language="VBScript">
+    Sub Window_OnLoad
+        ' Set a timer for 10 seconds to close the app
+        idTimer = window.setTimeout("CloseMe", 10000, "VBScript")
+    End Sub
+
+    Sub CloseMe
+        window.close
+    End Sub
+</script>
+
+<style>
+    body {
+        background-color: #000000;
+        color: #00FF00;
+        font-family: "Courier New", Courier, monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+    .warning {
+        color: #FF0000;
+        font-size: 3em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .matrix-text {
+        font-size: 1.2em;
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+    <div class="warning">Warning: Malware Detected</div>
+    <div class="matrix-text">
+        Attempting to encrypt C:\Users\Default... <br>
+        Bypassing Firewall... <font color="white">[SUCCESS]</font><br>
+        Uploading personal files to remote server...<br><br>
+        <strong>System shutdown initiated in 10 seconds.</strong>
+    </div>
+</body>
+</html>
